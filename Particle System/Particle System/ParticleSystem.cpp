@@ -88,31 +88,30 @@ void ParticleSystem::draw()
 
 	// immediate mode drawing
 	// loop through all particles
-	for (unsigned int i = 0; i < numParticles; i++)
+	/*for (unsigned int i = 0; i < numParticles; i++)
 	{
 		glPointSize(3.0f);
 		glBegin(GL_POINTS);
 		glColor4f(colors[i * 4 + 0], colors[i * 4 + 1], colors[i * 4 + 2], colors[i * 4 + 3]);
 		glVertex3f(positions[i * 3 + 0], positions[i * 3 + 1], positions[i * 3 + 2]);
 		glEnd();
-	}
+	}*/
 
-	// VBO mode drawing
-	//glBindBuffer(GL_ARRAY_BUFFER, pos_id);
-	//glEnableClientState(GL_VERTEX_ARRAY);
-	//glVertexPointer(3, GL_FLOAT, 0, NULL);
+	// vertex array mode drawing
+	glPointSize(3.0f);
 
-	//glBindBuffer(GL_ARRAY_BUFFER, col_id);
-	//glEnableClientState(GL_COLOR_ARRAY);
-	//glColorPointer(4, GL_FLOAT, 0, NULL);
+	// Enable vertex arrays
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glVertexPointer(3, GL_FLOAT, 0, positions);
 
+	// Enable color arrays
+	glEnableClientState(GL_COLOR_ARRAY);
+	glColorPointer(4, GL_FLOAT, 0, colors);
 
-	//// draw elements
-	//glDrawArrays(GL_POINTS, 0, numParticles);
+	glDrawArrays(GL_POINTS, 0, numParticles);
 
-	//
-	//glDisableClientState(GL_VERTEX_ARRAY);
-	//glDisableClientState(GL_COLOR_ARRAY);
+	glDisableClientState(GL_COLOR_ARRAY);
+	glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 void ParticleSystem::prepareBufObjects()
