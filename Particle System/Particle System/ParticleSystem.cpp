@@ -85,18 +85,6 @@ void ParticleSystem::update(float deltaTime)
 
 void ParticleSystem::draw()
 {
-
-	// immediate mode drawing
-	// loop through all particles
-	/*for (unsigned int i = 0; i < numParticles; i++)
-	{
-		glPointSize(3.0f);
-		glBegin(GL_POINTS);
-		glColor4f(colors[i * 4 + 0], colors[i * 4 + 1], colors[i * 4 + 2], colors[i * 4 + 3]);
-		glVertex3f(positions[i * 3 + 0], positions[i * 3 + 1], positions[i * 3 + 2]);
-		glEnd();
-	}*/
-
 	// vertex array mode drawing
 	glPointSize(3.0f);
 
