@@ -177,7 +177,8 @@ int main(int argc, char* argv[])
 	initialGL();
 	init();
 
-	g_particles.prepareBufObjects();
+	// prepare vertex buffer objects - will be implemented later
+	//g_particles.prepareBufObjects();
 
 	// Disable V-Sync, which can otherwise cap the FPS at the monitor's maximum refresh rate.
 	if (wglewIsSupported("WGL_EXT_swap_control")) {
