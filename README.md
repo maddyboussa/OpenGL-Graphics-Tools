@@ -14,6 +14,6 @@ In order to do so, I implemented a Particle System class that handles the vertex
 
 The skeleton rig tool allows users to visualize and manipulate the joints of an animtion rig skeleton.
 
-Utilizing transformation matrices and hierarchies in C++ and OpenGL, the skeleton rig has 16 rotatable joints that can be maneuvered into a variety of custom poses. Intuitive user controls were implemented to allow users to traverse the joints and transform the position of the specific limbs and joints in a realistic manner. A text file can be found within the project directory outlining the specific user controls. This project required in-depth knowledge of OpenGL's pushMatrix() and popMatrix functions, and a solid understanding of how object transformations and rendering are processed under the hood.
+Utilizing transformation matrices and hierarchies in C++ and OpenGL, the skeleton rig has 16 rotatable joints that can be maneuvered into a variety of custom poses. This project required in-depth knowledge of OpenGL's pushMatrix() and popMatrix functions, and a solid understanding of how object transformations and rendering are processed under the hood. Intuitive user controls were implemented to allow users to traverse the joints and transform the position of the specific limbs and joints in a realistic manner. A text file can be found within the project directory outlining the specific user controls.
 
 ## MORE COMING SOON
